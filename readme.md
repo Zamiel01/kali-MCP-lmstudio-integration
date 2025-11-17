@@ -13,8 +13,9 @@ I recently discovered a way to connect my Kali MCP server to LM Studio, enabling
 First, open your terminal and install the Kali MCP server package:
 
 ```bash
+
+sudo apt install mcp-kali-server
+
 <br><br>
 ![Kali](./images/kali.png)
-<br><br>
-sudo apt install mcp-kali-server
 <br><br>
