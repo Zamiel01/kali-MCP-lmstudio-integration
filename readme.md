@@ -28,6 +28,12 @@ This will download the repository containing `mcp_server.py`.
 
 ---
 
+---
+
+![Open LM Studio](./images/entering-mcp.png)
+
+---
+
 ## Step 3: Install LM Studio  
 
 Go to the official [LM Studio](https://lmstudio.ai) website and download the latest version.  
@@ -87,7 +93,7 @@ Replace its content with the following, making sure to update the path to `mcp_s
 }
 
 ```
-![Open LM Studio](./images/entering-mcp.json-script.png.png)
+![Open LM Studio](./images/entering-mcp.png)
 ```
 ```
 
