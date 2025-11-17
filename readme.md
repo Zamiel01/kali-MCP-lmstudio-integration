@@ -14,75 +14,77 @@ First, open your terminal and install the Kali MCP server package:
 
 ```bash
 sudo apt install mcp-kali-server
-
+<br>
 Step 2: Clone the MCP Server Repository
+Next, go to your home directory and clone the official GitHub repository to get mcp_server.py:
 
-Next, go to your home directory and clone the official GitHub repository to get the mcp_server.py file:
-
+bash
+Copy code
 cd ~
 git clone https://github.com/Wh0am123/MCP-Kali-Server
-
-
 This will download the repository containing mcp_server.py.
 
+<br>
 Step 3: Install LM Studio
+Go to the official LM Studio website and download the latest version.
+Once downloaded, make it executable and run it:
 
-Go to the official LM Studio website and download the latest version. Once downloaded, make it executable and run it:
-
+bash
+Copy code
 chmod +x ./LM-studio-<version>-x64.AppImage
 ./LM-studio-<version>-x64.AppImage
-
-
+<br>
 Step 4: Download a Model
-
 Once LM Studio is running:
 
-Go to the Program tab (top-left corner).
+Go to the Program tab (top-left corner)
 
-Click Install to choose a model. I recommend using the GPT-OSS model.
+Click Install to choose a model
 
+I recommend using the GPT-OSS model
+
+<br>
 Step 5: Start the Kali MCP Server
-
 Open a new terminal window and start the server:
 
+bash
+Copy code
 kali-server-mcp
-
-
 You should see the server running at:
 
+cpp
+Copy code
 http://127.0.0.1:5000
-
-
 This is your Kali MCP server.
 
+<br>
 Step 6: Configure LM Studio to Use the MCP Server
-
 In LM Studio, open the mcp.json file.
 
-Replace its content with the following, making sure to update the path to mcp_server.py:
+Replace its content with the following (update the path to your mcp_server.py):
 
+json
+Copy code
 {
-    "mcpServers": {
-        "kali_mcp": {
-            "command": "python3",
-            "args": [
-                "/absolute/path/to/mcp_server.py",
-                "--server",
-                "http://127.0.0.1:5000/"
-            ]
-        }
+  "mcpServers": {
+    "kali_mcp": {
+      "command": "python3",
+      "args": [
+        "/absolute/path/to/mcp_server.py",
+        "--server",
+        "http://127.0.0.1:5000/"
+      ]
     }
+  }
 }
-
-
-Important: Replace /absolute/path/to/mcp_server.py with the actual path where you cloned the GitHub repository.
+🔹 Important: Replace /absolute/path/to/mcp_server.py with your actual path.
 
 Save the file.
 
+<br>
 Step 7: Restart LM Studio
-
-Close LM Studio and open it again. Your setup should now be fully functional, allowing you to run AI models from your Kali MCP server through LM Studio.
+Close LM Studio and open it again.
+Your setup should now be fully functional — LM Studio will connect to your Kali MCP server and run models through it.
 
 ✅ Conclusion
-
-By connecting LM Studio to my Kali MCP server, I can now run AI models locally on Kali with full integration. This setup opens up new possibilities for testing and deploying models in a secure Linux environment. 
+By connecting LM Studio to my Kali MCP server, I can now run AI models locally on Kali with full integration. This setup opens up new possibilities for testing and deploying models in a secure Linux environment.
